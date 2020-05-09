@@ -1,0 +1,27 @@
+{
+  "name": "veiss/skeleton",
+  "type": "prestashop-module",
+  "authors": [{
+    "name": "veiss",
+    "email": "alex@veiss.com"
+  }],
+  "autoload": {
+    "psr-4": {
+      "veiss\\Skeleton\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.1"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.2"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "php -r \"copy('config/pre-commit', '.git/hooks/pre-commit');\""
+    ],
+    "post-update-cmd": [
+      "php -r \"copy('config/pre-commit', '.git/hooks/pre-commit');\""
+    ]
+  }
+}
