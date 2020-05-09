@@ -14,7 +14,11 @@ clone repository and add it to modules folder on a PrestaShop system
 ### Installing
 
 1. Change both module folder and main class name to your module name.
-2. Find and replace on module scope all texts which starts with _Skeleton_ or _skeleton_ string to your module name.
+2. Find and replace on module scope all texts which starts with _Skeleton_ and _skeleton_ string to your module name.
+   MACOSX:
+   LC_ALL=C find . -type f -name '_._' -exec sed -i '' s/skeleton/modulename/ {} +
+   LC_ALL=C find . -type f -name '_._' -exec sed -i '' s/Skeleton/Modulename/ {} +
+
 3. Execute _composer install_.
 4. If module does not appear in the list, make sure name in the constructor matches the main file and folder name and also if folders have right permissions.
 5. Install module.
