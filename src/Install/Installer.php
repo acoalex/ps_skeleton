@@ -109,19 +109,21 @@ class Installer extends AbstractInstaller
     private function installConfiguration()
     {
         $configuration = $this->configuration['configuration'];
-
         if (empty($configuration)) {
             return true;
         }
 
-        foreach ($configuration as $name => $value) {
-            if (!Configuration::updateValue($this->module->name . "_" . $name, $value)) {
-                throw new Exception(
-                    sprintf(
-                        $this->module->l('Configuration %s has not been installed.', $this->getFileName($this)),
-                        $name
-                    )
-                );
+        foreach ($configuration as $index => $element) {
+            foreach ($element as $name => $value) {
+
+                if (!Configuration::updateValue($this->module->name . "_" . $name, $value)) {
+                    throw new Exception(
+                        sprintf(
+                            $this->module->l('Configuration %s has not been installed.', $this->getFileName($this)),
+                            $name
+                        )
+                    );
+                }
             }
         }
 
