@@ -115,7 +115,7 @@ class Installer extends AbstractInstaller
         }
 
         foreach ($configuration as $name => $value) {
-            if (!Configuration::updateValue($name, $value)) {
+            if (!Configuration::updateValue($this->module->name . "_" . $name, $value)) {
                 throw new Exception(
                     sprintf(
                         $this->module->l('Configuration %s has not been installed.', $this->getFileName($this)),

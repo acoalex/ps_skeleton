@@ -1,12 +1,13 @@
 parameters:
     module_settings:
-        - title: "Titulo de prueba"
-        - avatar: "avatar.jpg"
+        configuration:
+            - title: "Titulo de prueba"
+            - avatar: "avatar.jpg"
 
-        - hooks:
+        hooks:
               - "actionDispatcherBefore"
 
-        - tabs:
+        tabs:
               - {
                     name: "Skeleton",
                     parent_class_name: "AdminParentModulesSf",

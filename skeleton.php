@@ -135,7 +135,12 @@ class Skeleton extends Module
         $this->moduleContainer = new $containerClass();
     }
 
-    /* FUNCTIONS PRIVATE */
+    public function getConfig($key)
+    {
+        $config = $this->getConfigVars();
+        return (array_key_exists($key, $config)) ? $config[$key] : null;
+    }
+
     public function getConfigVars()
     {
         $configVars = [];
