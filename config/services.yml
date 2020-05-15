@@ -19,6 +19,12 @@ parameters:
                     parent_class_name: "AdminSkeletonTab",
                     class_name: "AdminSkeletonInfo",
                 }
+              - {
+                    name: "Install",
+                    parent_class_name: "AdminSkeletonTab",
+                    class_name: "AdminSkeletonInstall",
+                }
+
 
 services:
     _defaults:

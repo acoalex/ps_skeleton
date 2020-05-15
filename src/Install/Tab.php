@@ -21,6 +21,7 @@ class Tab
      * @var string info controller name
      */
     private $controllerInfo = 'AdminSkeletonInfo';
+    private $controllerInstall = 'AdminSkeletonInstall';
 
     /**
      * @var array
@@ -41,6 +42,14 @@ class Tab
     public function getControllerInfo()
     {
         return $this->controllerInfo;
+    }
+
+    /**
+     * @return string
+     */
+    public function getControllerInstall()
+    {
+        return $this->controllerInstall;
     }
 
     /**
