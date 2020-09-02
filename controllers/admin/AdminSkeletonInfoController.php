@@ -16,6 +16,7 @@
 class AdminSkeletonInfoController extends \veiss\Skeleton\Controller\AdminController
 {
     private $templateFile;
+    public $name;
 
     public function initContent()
     {
