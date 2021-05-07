@@ -1,13 +1,13 @@
 {
-  "name": "veiss/skeleton",
+  "name": "acoalex/skeleton",
   "type": "prestashop-module",
   "authors": [{
-    "name": "veiss",
-    "email": "alex@veiss.com"
+    "name": "acoalex",
+    "email": "webmaster@acoalex.com"
   }],
   "autoload": {
     "psr-4": {
-      "veiss\\Skeleton\\": "src/"
+      "acoalex\\Skeleton\\": "src/"
     }
   },
   "require": {

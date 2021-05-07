@@ -2,12 +2,12 @@
 /**
  * NOTICE OF LICENSE
  *
- * @author    veiss, UAB www.veiss.com <alex@veiss.com>
- * @copyright Copyright (c) permanent, veiss, UAB
+ * @author    acoalex, UAB www.acoalex.com <webmaster@acoalex.com>
+ * @copyright Copyright (c) permanent, acoalex, UAB
  * @license   MIT
  * @see       /LICENSE
  *
- *  International Registered Trademark & Property of veiss, UAB
+ *  International Registered Trademark & Property of acoalex, UAB
  */
 
 use Symfony\Component\Config\ConfigCache;
@@ -15,9 +15,9 @@ use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Dumper\PhpDumper;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
-use veiss\Skeleton\Install\Installer;
-use veiss\Skeleton\Install\Tab;
-use veiss\Skeleton\Install\Uninstaller;
+use acoalex\Skeleton\Install\Installer;
+use acoalex\Skeleton\Install\Tab;
+use acoalex\Skeleton\Install\Uninstaller;
 
 class Skeleton extends Module
 {
@@ -38,7 +38,7 @@ class Skeleton extends Module
         $this->tab = 'other_modules';
         $this->name = 'skeleton';
         $this->version = '1.0.0';
-        $this->author = 'veiss';
+        $this->author = 'acoalex';
 
         parent::__construct();
         $this->autoLoad();

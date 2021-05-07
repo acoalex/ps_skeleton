@@ -2,18 +2,18 @@
 /**
  * NOTICE OF LICENSE
  *
- * @author    veiss, UAB www.veiss.eu <support@veiss.eu>
- * @copyright Copyright (c) permanent, veiss, UAB
+ * @author    acoalex, UAB acoalex.com <webmaster@acoalex.com>
+ * @copyright Copyright (c) permanent, acoalex, UAB
  * @license   MIT
  * @see       /LICENSE
  *
- *  International Registered Trademark & Property of veiss, UAB
+ *  International Registered Trademark & Property of acoalex, UAB
  */
 
 /**
  * Class AdminSkeletonTabController - it is invisible tab used for other tab display inheritance
  */
-class AdminSkeletonTabController extends \veiss\Skeleton\Controller\AdminController
+class AdminSkeletonTabController extends \acoalex\Skeleton\Controller\AdminController
 {
 
 }

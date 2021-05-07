@@ -2,12 +2,12 @@
 /**
  * NOTICE OF LICENSE
  *
- * @author    veiss, Alex www.veiss.eu <alex@veiss.com>
- * @copyright Copyright (c) permanent, veiss, UAB
+ * @author    acoalex, Alex acoalex.com <webmaster@acoalex.com>
+ * @copyright Copyright (c) permanent, acoalex, UAB
  * @license   MIT
  * @see       /LICENSE
  *
- *  International Registered Trademark & Property of veiss, UAB
+ *  International Registered Trademark & Property of acoalex, UAB
  */
 
 header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");

@@ -38,18 +38,21 @@ services:
 
     #    Installers
     install.tab:
-        class: 'veiss\Skeleton\Install\Tab'
+        class: 'acoalex\Skeleton\Install\Tab'
         arguments:
             - "%module_settings%"
 
     installer:
-        class: 'veiss\Skeleton\Install\Installer'
+        class: 'acoalex\Skeleton\Install\Installer'
         arguments:
             - "@skeleton.module"
             - "%module_settings%"
 
     uninstaller:
-        class: 'veiss\Skeleton\Install\Uninstaller'
+        class: 'acoalex\Skeleton\Install\Uninstaller'
         arguments:
             - "@skeleton.module"
             - "%module_settings%"
+
+    skeleton.logger:
+        class: 'acoalex\Skeleton\Services\LogService'
