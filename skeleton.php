@@ -14,6 +14,7 @@ use Symfony\Component\Config\ConfigCache;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Dumper\PhpDumper;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use acoalex\Skeleton\Install\Installer;
 use acoalex\Skeleton\Install\Tab;
@@ -90,7 +91,7 @@ class Skeleton extends Module
      *
      * @return SkeletonContainer
      */
-    public function getContainer()
+    public function getContainer(): ContainerInterface
     {
         return $this->moduleContainer;
     }
