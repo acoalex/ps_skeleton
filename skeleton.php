@@ -10,15 +10,15 @@
  *  International Registered Trademark & Property of acoalex, UAB
  */
 
-use Symfony\Component\Config\ConfigCache;
-use Symfony\Component\Config\FileLocator;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Dumper\PhpDumper;
-use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use acoalex\Skeleton\Install\Installer;
 use acoalex\Skeleton\Install\Tab;
 use acoalex\Skeleton\Install\Uninstaller;
+use Symfony\Component\Config\ConfigCache;
+use Symfony\Component\Config\FileLocator;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\DependencyInjection\Dumper\PhpDumper;
+use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 class Skeleton extends Module
 {
@@ -77,6 +77,7 @@ class Skeleton extends Module
     {
         /** @var Uninstaller $unInstaller */
         $unInstaller = $this->getContainer()->get('uninstaller');
+        $this->deleteConfiguration();
 
         return parent::uninstall() && $unInstaller->init();
     }
@@ -150,5 +151,12 @@ class Skeleton extends Module
         }
 
         return $configVars;
+    }
+
+    private function deleteConfiguration()
+    {
+        foreach (self::CONFIG_VARS_KEYS as $key) {
+            Configuration::deleteByName($this->name . "_" . $key);
+        }
     }
 }
